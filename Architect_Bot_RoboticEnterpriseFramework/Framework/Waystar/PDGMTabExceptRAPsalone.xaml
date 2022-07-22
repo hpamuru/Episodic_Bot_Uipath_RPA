@@ -1,0 +1,393 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PDGMTabExceptRAPsalone" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="PGDM" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="Window" Type="InOutArgument(ui:Window)" />
+    <x:Property Name="config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>906,2644.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="24">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PDGM Tab- Except RAPs alone" sap:VirtualizedContainerService.HintSize="916,2580" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="PDGMNoClaims" />
+      <Variable x:TypeArguments="x:String" Name="Delay2Seconds" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="874,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[Delay2Seconds]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[config("Delay20Seconds").ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:WindowScope SearchScope="{x:Null}" Selector="{x:Null}" ApplicationWindow="[Window]" DisplayName="Attach Window 'hchb.ui.exe HCHB'" sap:VirtualizedContainerService.HintSize="874,2386" sap2010:WorkflowViewState.IdRef="WindowScope_7" InformativeScreenshot="89b3b7e4587634f8ba6152763d071d3f" TimeoutMS="[convert.ToInt32(Split(Delay2Seconds,&quot;:&quot;).ElementAt(2))*1000]" Window="[Window]">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="840,2240" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="Delay10Seconds" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;PGDM&quot;" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="Click_132" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition OffsetX="26" OffsetY="57" Position="TopLeft" />
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="303ee5e7-c67d-4a72-8ce1-86d8b89fc524" InformativeScreenshot="345c3d9c51320e1546e69a30b7da834b" Selector="&lt;wnd ctrlname='_BaseForm_Toolbars_Dock_Area_Top' /&gt;&lt;ctrl name='DockTop' role='grouping' /&gt;&lt;ctrl name='Ribbon' role='property page' /&gt;&lt;ctrl name='Financial Manager' role='property page' /&gt;&lt;ctrl name='Billing' role='tool bar' /&gt;&lt;ctrl name='PDGM' role='menu item' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click on &quot;Claim Management&quot; " sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="Click_133" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition OffsetX="61" OffsetY="11" Position="TopLeft" />
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1ddce6b3-9bc6-4848-b874-5c993fa4bc2c" InformativeScreenshot="b4db5d03a128a9b171f3b4c99e60c9e5" Selector="&lt;wnd ctrlname='_BaseForm_Toolbars_Dock_Area_Top' /&gt;&lt;ctrl name='DockTop' role='grouping' /&gt;&lt;ctrl name='Ribbon' role='property page' /&gt;&lt;ctrl name='Financial Manager' role='property page' /&gt;&lt;ctrl name='Billing' role='tool bar' /&gt;&lt;ctrl name='PDGM' role='menu item' /&gt;&lt;ctrl name='Claim Management' role='menu item' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Uncheck ' RAP's '" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="Click_134" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51a78ec1-aace-46d8-9bb5-f8a9cd81d2e6" InformativeScreenshot="9e1fb51ff7188a2ff0d490bcd37cc033" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='PdgmClaimManagement' isremoteapp='1' /&gt;&lt;wnd ctrlname='windowDockingArea1' /&gt;&lt;wnd ctrlname='dockableWindow1' /&gt;&lt;wnd ctrlname='pnlLeftPane' /&gt;&lt;wnd ctrlname='pnlSelectionCriteria' /&gt;&lt;wnd ctrlname='grpTabPPS' /&gt;&lt;wnd ctrlname='grpBillTypes' /&gt;&lt;wnd ctrlname='chkRAPs' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Check ' RAP Cancels ' " sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="Click_135" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="df46fdfb-2548-4fac-a9f6-91516edf28f8" InformativeScreenshot="1395d18833badd08a99e38618abaed8e" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='PdgmClaimManagement' isremoteapp='1' /&gt;&lt;wnd ctrlname='windowDockingArea1' /&gt;&lt;wnd ctrlname='dockableWindow1' /&gt;&lt;wnd ctrlname='pnlLeftPane' /&gt;&lt;wnd ctrlname='pnlSelectionCriteria' /&gt;&lt;wnd ctrlname='grpTabPPS' /&gt;&lt;wnd ctrlname='grpBillTypes' /&gt;&lt;wnd ctrlname='chkRAPCancels' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Check ' Claim Adjustments '" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="Click_136" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f37eafe8-fb46-41dc-88fe-5ba688678ebc" InformativeScreenshot="ff0e38b29333e7769fcca14f7e027227" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='PdgmClaimManagement' isremoteapp='1' /&gt;&lt;wnd ctrlname='windowDockingArea1' /&gt;&lt;wnd ctrlname='dockableWindow1' /&gt;&lt;wnd ctrlname='pnlLeftPane' /&gt;&lt;wnd ctrlname='pnlSelectionCriteria' /&gt;&lt;wnd ctrlname='grpTabPPS' /&gt;&lt;wnd ctrlname='grpBillTypes' /&gt;&lt;wnd ctrlname='chkClaimAdjustments' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Uncheck ' NOAs '" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="Click_137" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33ca6e6a-ae29-4e42-82d4-e47afd49397e" InformativeScreenshot="95a6f3a20b62a3b4a78115b8624fa397" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='PdgmClaimManagement' isremoteapp='1' /&gt;&lt;wnd ctrlname='windowDockingArea1' /&gt;&lt;wnd ctrlname='dockableWindow1' /&gt;&lt;wnd ctrlname='pnlLeftPane' /&gt;&lt;wnd ctrlname='pnlSelectionCriteria' /&gt;&lt;wnd ctrlname='grpTabPPS' /&gt;&lt;wnd ctrlname='grpBillTypes' /&gt;&lt;wnd ctrlname='chkNoas' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select &quot;AR Group&quot; " sap:VirtualizedContainerService.HintSize="798,134" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="WAYSTAR INSTITUTIONAL">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String>(All Payors)</x:String>
+                  <x:String>(All AR Groups)</x:String>
+                  <x:String>GREEN</x:String>
+                  <x:String>PURPLE</x:String>
+                  <x:String>RED</x:String>
+                  <x:String>WAYSTAR INSTITUTIONAL</x:String>
+                  <x:String>WAYSTAR-INSTITUTIONAL - MCR ONLY</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93c37a1c-fb52-455f-85eb-11056bb1f78e" InformativeScreenshot="ad4da6431fb8b333522761715e2bd165" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='PdgmClaimManagement' isremoteapp='1' /&gt;&lt;wnd ctrlname='windowDockingArea1' /&gt;&lt;wnd ctrlname='dockableWindow1' /&gt;&lt;wnd ctrlname='pnlLeftPane' /&gt;&lt;wnd ctrlname='pnlSelectionCriteria' /&gt;&lt;wnd ctrlname='grpTabPPS' /&gt;&lt;wnd ctrlname='cboARGroups' /&gt;&lt;wnd ctrlname='cboDropDown' /&gt;&lt;ctrl idx='2' role='combo box' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Load&quot;" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="Click_138" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ac0f231-3dc9-4d81-b0ef-0d109c98825f" InformativeScreenshot="f3cd49903daffdfa171dc1db89e77db0" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='PdgmClaimManagement' isremoteapp='1' /&gt;&lt;wnd ctrlname='windowDockingArea1' /&gt;&lt;wnd ctrlname='dockableWindow1' /&gt;&lt;wnd ctrlname='pnlLeftPane' /&gt;&lt;wnd ctrlname='pnlLoadButton' /&gt;&lt;wnd ctrlname='btnLoad' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Delay10Seconds" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="798,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+              <ui:GetRobotAsset.Value>
+                <OutArgument x:TypeArguments="x:String">[Delay10Seconds]</OutArgument>
+              </ui:GetRobotAsset.Value>
+            </ui:GetRobotAsset>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="798,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay DisplayName="Wait time for Claims to Load" Duration="[TimeSpan.Parse(Delay10Seconds)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:ImageFound DisplayName="If PDGM Except RAPs has No Claims" Found="[PDGMNoClaims]" sap:VirtualizedContainerService.HintSize="798,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+              <ui:ImageFound.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+              </ui:ImageFound.Image>
+              <ui:ImageFound.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="941830de-7ca3-44de-bb3d-a044125c98b3" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='HCHBMessageBoxForm' isremoteapp='1' /&gt;" TimeoutMS="[convert.ToInt32(Split(Delay10Seconds,&quot;:&quot;).ElementAt(2))*1000]">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ImageFound.Target>
+            </ui:ImageFound>
+            <If Condition="[PDGMNoClaims = True]" DisplayName="Condition If Image Exists" sap:VirtualizedContainerService.HintSize="798,532.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Acknowledge Error &amp; Send Email" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Ok" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_140" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dcca0c67-9053-4306-849d-718cc9ce3018" InformativeScreenshot="58939fc0c6ec37f08a95962a22914243" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='HCHBMessageBoxForm' isremoteapp='1' /&gt;&lt;wnd aaname='OK' cls='WindowsForms10.Window.*' title='&amp;amp;OK' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Follow Steps if Claims Available" sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click claim checkbox" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_139" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af2b40f3-2cae-4bce-a449-b8eb36530b47" InformativeScreenshot="08e87cf5ab7bd3b60ff84a9017154f3f" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='PdgmClaimManagement' isremoteapp='1' /&gt;&lt;wnd ctrlname='pnlRightPane' /&gt;&lt;wnd ctrlname='grpItems' /&gt;&lt;wnd ctrlname='splitContainer1' /&gt;&lt;wnd ctrlname='grdClaims' /&gt;&lt;ctrl name='Column Headers' role='grouping' /&gt;&lt;ctrl idx='1' role='column header' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="checked" DisplayName="Check if UB04 is checked" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="GetAttribute_8">
+                    <ui:GetAttribute.Result>
+                      <OutArgument x:TypeArguments="x:Boolean">[PGDM]</OutArgument>
+                    </ui:GetAttribute.Result>
+                    <ui:GetAttribute.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c4b5d0ce-e21e-4b8e-92a1-5d9a308239ab" InformativeScreenshot="46d41c7bd47600e3970f3e9194975c05" Selector="&lt;wnd app='hchb.ui.exe' ctrlname='PdgmClaimManagement' isremoteapp='1' /&gt;&lt;wnd ctrlname='pnlRightPane' /&gt;&lt;wnd ctrlname='grpItems' /&gt;&lt;wnd ctrlname='splitContainer1' /&gt;&lt;wnd ctrlname='chkUB' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:GetAttribute.Target>
+                  </ui:GetAttribute>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+  </Sequence>
+</Activity>
